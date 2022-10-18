@@ -6,8 +6,26 @@ public class Apuntes {
         System.out.println("Ejecutando codigo Java desde VSC! \n");
         System.out.println("Mi nombre es Daniel Gustavo");
 
-        // TIPOS DE DATOS EN JAVA (primitivos)
+        // JAVA CARACTERISTICAS
+        /**
+         * Java es un lenguaje orientado a objetos.
+         * Distribuido Multihilos
+         * Seguro e independiente de la plataforma (windows,linux, mac) con tener la JVM (java virtual machine)
+         */
 
+        // VERSIONES DE JAVA
+        /**
+         * JAVA SE: PARA PROPOSITOS GENERALES UTILIZADA EN APLICACIONES DE ESCRITORIO Y SERVIDORES.
+         * JAVA EE: PARA EL DESARROLLO DE APLICACIONES DISTRIBUIDAS QUE TRABAJAN SOBRE INTERNET.
+         * JAVA ME: PARA DISPOSITIVOS CON RECURSOS LIMITADOS TALES COMO DISPOSITIVOS MOBILES, TV, IMPRESORAS.
+         */
+
+        // JAVA CONCEPTOS
+        /**
+         * JDK (JAVA DEVELOPMENT KIT): INCLUYE UN COMPILADOR, UN ENTORNO DE EJECUCION (RUNTIME ENVIRONMENT)Y OTRAS HERRAMIENTAS PARA EL DESARROLLO DE APLICACIONES.
+         */
+        
+        // TIPOS DE DATOS EN JAVA (primitivos)
         /**
             ENTEROS ******
          * byte (–128 to 127)
@@ -42,7 +60,8 @@ public class Apuntes {
         System.out.println(euler + "\n");
 
 
-        //casting
+        //CASTING
+        
         int a = 5;
         int b = 2;
         float c = (float)a / (float)b;
@@ -122,7 +141,7 @@ public class Apuntes {
          * String variable = new String ("Texto");
          */
 
-        //  algunos metodos de los String
+        //  Algunos metodos de los String
 
         String name = "Daniel, ese es mi nombre";
         System.out.println("\nTexto: " + name);
@@ -153,11 +172,6 @@ public class Apuntes {
         // usamos el metodo equalsIgnoreCase para que tome como iguales mayusculas como minusculas
         System.out.println(cadena1.equalsIgnoreCase(cadena2));
 
-        
-        
-
-
-        
 
         //  Ciclos como for, while, do while, for each
         /**
@@ -192,11 +206,16 @@ public class Apuntes {
         nombres.forEach((indice, valor) -> {
             System.out.println("ID: " + indice + " Nombre: " + valor);
         });
-        
+    
+        // ademas tenemos sentencias como BREAK y CONTINUE
+        /*
+         * break: corta el proceso de un ciclo,se sale del programa sin importar si no termino las iteraciones. 
+         * continue: pasa a la siguiente iteración
+        */
 
         // ARREGLOS
         // son una coleccion de datos del mismo tipo de valor, un arreglo debe de tener un tamaño especifico.
-        // simepre necesitamos saber el tamañao para poder declarar un arreglo
+        // siempre necesitamos saber el tamañao para poder declarar un arreglo
 
         // declaracion de un arreglo
 
@@ -211,6 +230,7 @@ public class Apuntes {
         // mandando imprimir
         System.out.println("Numero [0]: " + numero1);
         System.out.println("Numero [1]: " + numero2);
+        
         
         
 
