@@ -6,6 +6,9 @@ public class Apuntes {
         System.out.println("Ejecutando codigo Java desde VSC! \n");
         System.out.println("Mi nombre es Daniel Gustavo");
 
+        // entrada de datos desde teclado
+        // Scanner datos = new Scanner(System.in);
+
         // JAVA CARACTERISTICAS
         /**
          * Java es un lenguaje orientado a objetos.
@@ -136,7 +139,7 @@ public class Apuntes {
          * Dependiendo a la condicion, realizara el proceso del codigo true o false.
          */
 
-        String cadena = (8 > 9) ? "True" : "Falso";
+        String cadena = (8 > 9) ? "Verdadero" : "Falso";
         System.out.println("\nOperador Ternario: " + cadena);
 
         // CADENAS
@@ -164,14 +167,15 @@ public class Apuntes {
          * Si no existe retorna -1.
          * Puedes pasarle un segundo argumento, indica el indice a partir del cual se
          * iniciara la busqueda.
-        */
+         */
         String mensajeTexto = "Hola Mundo";
         int indiceLetraM = mensajeTexto.indexOf("M");
         System.out.println("Indexof: " + indiceLetraM);
         /**
-         * Con subString(indiceInicial,indiceFinal) nos retornara parte de  la cadena basado en los indices que le estamos mandando.
+         * Con subString(indiceInicial,indiceFinal) nos retornara parte de la cadena
+         * basado en los indices que le estamos mandando.
          * Puedes pasarle un segundo argumento, indica el indiceFinal de la cadena.
-        */
+         */
         String subString = mensajeTexto.substring(indiceLetraM, indiceLetraM + 2);
         System.out.println("SubString: " + subString);
         // con format, format(" %s",variable de tipo String en este caso);
@@ -329,6 +333,39 @@ public class Apuntes {
                 break;
             }
         }
+
+        // MATRICES O ARREGLO BIDIMENCIONALES
+        /**
+         * Arreglo en 2 o mas dimenciones
+         * Sigue los mismos principios que los arreglos normales.
+         */
+
+        // declaración
+        int matriz[][] = new int[3][3];
+        // agregando valores desde teclado - consola
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                matriz[i][j] = i + j;
+            }
+        }
+
+        // imprimiendo con un for normal
+        System.out.println("Matriz de 3 x 3");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println("");
+        }
+        // imprmiendo con un foreach
+        System.out.println("Matriz con ForEach");
+        for(int fila[]: matriz){
+            for(int columna:fila){
+                System.out.print(columna);
+            }
+            System.out.println("");
+        }
+
 
     }
 }
