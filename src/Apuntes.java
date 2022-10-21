@@ -169,6 +169,7 @@ public class Apuntes {
          * iniciara la busqueda.
          */
         String mensajeTexto = "Hola Mundo";
+        String mensajeTexto2 = "";
         int indiceLetraM = mensajeTexto.indexOf("M");
         System.out.println("Indexof: " + indiceLetraM);
         /**
@@ -178,6 +179,8 @@ public class Apuntes {
          */
         String subString = mensajeTexto.substring(indiceLetraM, indiceLetraM + 2);
         System.out.println("SubString: " + subString);
+        // con isEmpty(), comprobamos si la cadena esta vacia, regresa un false or true
+        System.out.println("isEmpty: " + mensajeTexto2.isEmpty());
         // con format, format(" %s",variable de tipo String en este caso);
         String name2 = String.format("2do name: %s", "Gustavo");
         System.out.println("Usando format:" + name2);
@@ -198,6 +201,16 @@ public class Apuntes {
         // usamos el metodo equalsIgnoreCase para que tome como iguales mayusculas como
         // minusculas
         System.out.println(cadena1.equalsIgnoreCase(cadena2));
+
+
+        // Caracteres especiales en las cadenas
+        /**
+         * \n: salto de linea
+         * \t: tabulación
+         * \r: retorno de carro
+         * \": dobles comillas
+         * \\: backslash
+         */
 
         // Ciclos como for, while, do while, for each
         /**
@@ -335,6 +348,7 @@ public class Apuntes {
         }
 
         // MATRICES O ARREGLO BIDIMENCIONALES
+
         /**
          * Arreglo en 2 o mas dimenciones
          * Sigue los mismos principios que los arreglos normales.
@@ -357,15 +371,14 @@ public class Apuntes {
             }
             System.out.println("");
         }
-        // imprmiendo con un foreach
+        // imprmiendo con un for each
         System.out.println("Matriz con ForEach");
-        for(int fila[]: matriz){
-            for(int columna:fila){
+        for (int fila[] : matriz) {
+            for (int columna : fila) {
                 System.out.print(columna);
             }
             System.out.println("");
         }
-
 
     }
 }
