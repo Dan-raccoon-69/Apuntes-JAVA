@@ -202,7 +202,6 @@ public class Apuntes {
         // minusculas
         System.out.println(cadena1.equalsIgnoreCase(cadena2));
 
-
         // Caracteres especiales en las cadenas
         /**
          * \n: salto de linea
@@ -380,5 +379,50 @@ public class Apuntes {
             System.out.println("");
         }
 
+        // Clases para cada tipo primitivo, "clases envolventes-envoltorio"
+        /**
+         * boolean -> Boolean
+         * char -> Character
+         * byte -> Byte
+         * short -> Short
+         * int -> Integer
+         * long -> Long
+         * float -> Float
+         * double -> Double
+         * 
+         * Cada clase tiene metodos interesantes para transformar valores primitivos en
+         * cadenas de caracteres y viceversa.
+         */
+
+        System.out.println();
+        // CLASE INTEGER
+        // pasar una cadena de caracteres a un numero entero
+        int entero = Integer.parseInt("12345");
+        System.out.println("Entero: " + entero);
+        // metodo max, obtener el maximo entre 2 numeros
+        System.out.println("Maximo: " + Integer.max(69, 666));
+        /*
+         * Podemos obtener la representación binaria, hexadecima u octal de un numero
+         * entero.
+         */
+        System.out.println("Binario de 15: " + Integer.toBinaryString(15));
+        System.out.println("Octal de 15: " + Integer.toOctalString(15));
+        System.out.println("Hexadecimal de 15: " + Integer.toHexString(15));
+
+        // CLASE Character
+        // Saber si un caracter es letra o número
+        char $letra = 'a';
+        System.out.println();
+        System.out.println("Es letra?: " + Character.isAlphabetic($letra));
+        System.out.println("Es número?: " + Character.isDigit($letra));
+
+        // CLASE Boolean
+        System.out.println();
+        boolean verdadero1 = true;
+        boolean verdadero2 = true;
+        boolean false1 = false;
+        System.out.println("Es AND?: " + Boolean.logicalAnd(verdadero1, false1));
+        System.out.println("Es OR?: " + Boolean.logicalOr(verdadero1, false1));
+        System.out.println("Es XOR?: " + Boolean.logicalXor(false1, verdadero2));
     }
 }
