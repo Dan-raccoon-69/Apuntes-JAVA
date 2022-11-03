@@ -424,5 +424,46 @@ public class Apuntes {
         System.out.println("Es AND?: " + Boolean.logicalAnd(verdadero1, false1));
         System.out.println("Es OR?: " + Boolean.logicalOr(verdadero1, false1));
         System.out.println("Es XOR?: " + Boolean.logicalXor(false1, verdadero2));
+
+        // PROGRAMACION ORIENTADA A OBJETOS
+
+        // Conceptos
+        /**
+         * POO: Es un paradigma de programacion, una forma de programar para resolver un
+         * problema, se basa en la realidad haciendo enfasis en los objetos los cuales
+         * contienen
+         * atributos - caracteristicas y metodos - funcionalidades.
+         * Clase: es el molde - template en el cual se declaran los metodos y atributos
+         * y que gracias a la clase es posible crear objetos.
+         * Objeto: es una instancia de una clase el cual contiene metodos y atributos.
+         * 
+         */
+        System.out.println("\nPOO");
+        // instancia - creación de un objeto de la clase Perro, objeto llamado lUCAS
+        // haciendo uso del metodo constructor
+        Perro Lucas = new Perro("Lucas", "Meztizo", 1);
+        // imprimiendo sus datos
+        System.out.println("Nombre: " + Lucas.nombre + "\nEdad: " + Lucas.edad + "\nRaza: " + Lucas.raza);
+        // podemos hacerlo de esa manera o usar el metodo toString que nos devuelve los
+        // datos en forma de objeto
+        System.out.println(Lucas.toString());
+        // llamando una serie de metodos
+        Lucas.comer();
+        Lucas.jugar();
+        Lucas.ladrar();
+        // haciendo uso del metodo setter -> metodo setEdad
+        Lucas.setEdad(2);
+        // volviendo a imprimir
+        System.out.println(Lucas.toString());
+        // obteniendo el nombre del objeto -> metodo getNombre
+        String nameDog = Lucas.getNombre();
+        System.out.println("Nombre del Perro: " + nameDog);
+        System.out.println(Lucas.toString());
+
+        System.out.println("\nArea Triangulo");
+        Triangulo triangulo1 = new Triangulo(7.5f, 10.7f);
+        System.out.println(triangulo1.mostrarDatos());
+        Triangulo triangulo2 = new Triangulo(3.7f, 20.6f);
+        System.out.println(triangulo2.mostrarDatos());
     }
 }
