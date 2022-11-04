@@ -431,39 +431,73 @@ public class Apuntes {
         /**
          * POO: Es un paradigma de programacion, una forma de programar para resolver un
          * problema, se basa en la realidad haciendo enfasis en los objetos los cuales
-         * contienen
-         * atributos - caracteristicas y metodos - funcionalidades.
-         * Clase: es el molde - template en el cual se declaran los metodos y atributos
-         * y que gracias a la clase es posible crear objetos.
+         * contienen atributos - caracteristicas y metodos - funcionalidades.
+         * Clase: es la agrupación de objetos, el molde - template en el cual se
+         * declaran los metodos y atributos y que gracias a la clase es posible crear
+         * objetos.
          * Objeto: es una instancia de una clase el cual contiene metodos y atributos.
+         * Instancia: creación de un objeto a partir de una clase (new).
          * 
+         * Pilares de la POO: abstraccion, encapsulamiento, herencia y poliformismo.
          */
+
+        // ABSTRACCION:
         System.out.println("\nPOO");
         // instancia - creación de un objeto de la clase Perro, objeto llamado lUCAS
         // haciendo uso del metodo constructor
         Perro Lucas = new Perro("Lucas", "Meztizo", 1);
         // imprimiendo sus datos
-        System.out.println("Nombre: " + Lucas.nombre + "\nEdad: " + Lucas.edad + "\nRaza: " + Lucas.raza);
-        // podemos hacerlo de esa manera o usar el metodo toString que nos devuelve los
-        // datos en forma de objeto
+        // System.out.println("Nombre: " + Lucas.nombre + "\nEdad: " + Lucas.edad +
+        // "\nRaza: " + Lucas.raza);
+        // Ya que los declaramos como private los atributos, no podemos acceder
+        // totalmente a ellos.
+        // Podemos hacerlo de la manera anterior o usar el metodo toString que nos
+        // devuelve los
+        // datos en forma de objeto.
         System.out.println(Lucas.toString());
         // llamando una serie de metodos
         Lucas.comer();
         Lucas.jugar();
         Lucas.ladrar();
-        // haciendo uso del metodo setter -> metodo setEdad
+        // Haciendo uso de metodos
+        // metodo setter -> metodo setEdad para establecer un nuevo valor
         Lucas.setEdad(2);
         // volviendo a imprimir
         System.out.println(Lucas.toString());
         // obteniendo el nombre del objeto -> metodo getNombre
         String nameDog = Lucas.getNombre();
         System.out.println("Nombre del Perro: " + nameDog);
-        System.out.println(Lucas.toString());
 
         System.out.println("\nArea Triangulo");
         Triangulo triangulo1 = new Triangulo(7.5f, 10.7f);
         System.out.println(triangulo1.mostrarDatos());
         Triangulo triangulo2 = new Triangulo(3.7f, 20.6f);
         System.out.println(triangulo2.mostrarDatos());
+
+        /**
+         * ENCAPSULAMIENTO: un pilar de la POO, temas de seguridad practicamente, para
+         * eso se utilizan los modificadores de acceso para restringir el acceso de
+         * diferentes atributos y constructores.
+         * Modificadores de acceso: private, public, protected.
+         * PUBLIC: consultados, modificados o ejecutados por clases o objetos que se
+         * encuentren en el mismo paquete o en paquetes diferentes.
+         * PRIVATE: consultar, modificar y ejecutar elementos unicamente por la misma
+         * clase, para acceder a estos valores ya sea modificarlos o obtenerlos se hace
+         * uso de metodos setter y getter.
+         * PROTECTED:
+         */
+
+        /**
+         * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
+         * Reutilización de codigo.
+         */
+
+        /**
+         * POLIFORMISMO: Nos permite crear diferentes formas de una forma base, ligado a
+         * la herencia.
+         * Podemos comunicarnos con los objetos utilizando la misma sintaxis para darles
+         * mensajes al objeto.
+         */
+
     }
 }

@@ -1,12 +1,16 @@
+// archivo para el aprendizaje de la POO
 public class Triangulo {
-    public float base;
-    public float altura;
+    // atributos
+    private float base;
+    private float altura;
 
+    // constructor
     public Triangulo(float base, float altura) {
         this.base = base;
         this.altura = altura;
     }
 
+    // metodos
     public float getBase() {
         return base;
     }
@@ -23,6 +27,7 @@ public class Triangulo {
         this.altura = altura;
     }
 
+    // Metodo private, usuario no podra acceder, pero la clase TRIANGULO si
     private float area() {
         return (base * altura) / 2;
     }

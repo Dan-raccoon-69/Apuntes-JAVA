@@ -1,7 +1,8 @@
+// archivo para el aprendizaje de la POO
 public class Perro {
-    String nombre;
-    String raza;
-    int edad;
+    private String nombre;
+    private String raza;
+    private int edad;
 
     /**
      * El metodo constructor nos sirve para inicializar valores, el cual recibe los
