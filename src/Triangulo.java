@@ -29,11 +29,11 @@ public class Triangulo {
 
     // Metodo private, usuario no podra acceder, pero la clase TRIANGULO si
     private float area() {
-        return (base * altura) / 2;
+        return ((base * altura) / 2);
     }
 
     public String mostrarDatos() {
-        return "Triangulo [base = " + base + ", altura = " + altura + ", Area = " + area() + "]";
+        return "[base = " + base + ", altura = " + altura + ", Area = " + area() + "]";
     }
 
 }

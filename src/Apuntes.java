@@ -1,13 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Apuntes {
     public static void main(String[] args) throws Exception {
         System.out.println("Ejecutando codigo Java desde VSC! \n");
         System.out.println("Mi nombre es Daniel Gustavo");
-
-        // entrada de datos desde teclado
-        // Scanner datos = new Scanner(System.in);
 
         // JAVA CARACTERISTICAS
         /**
@@ -425,6 +424,34 @@ public class Apuntes {
         System.out.println("Es OR?: " + Boolean.logicalOr(verdadero1, false1));
         System.out.println("Es XOR?: " + Boolean.logicalXor(false1, verdadero2));
 
+        // Entrada y salida de DATOS
+        /**
+         * Clase Scanner -> metodo no estatico.
+         * Clase JoptionPane -> metodo estatico.
+         * Para usar ambas clases necesitas agregar sus respectivos paquetes
+         */
+
+        /**
+         * METODO ESTATICO es aquel metodo que para ejecutarlo no es necesario crear una
+         * instancia (objeto), basta con colocar la clase(punto) y llamar al metodo.
+         */
+
+        // CLASE JOptionPane
+        // String text = JOptionPane.showInputDialog("Mensaje");
+        // Nos devuelve un texto, si quieres usarlo como numero tienes que usar la clase
+        // envolvente Integer.
+        // Conversion a entero:
+        // int nume = Integer.parseInt(text);
+        // Operación:
+        // System.out.println(nume + 1); // 6
+
+        // CLASE SCANNER
+        // try (Scanner data = new Scanner(System.in)) {
+        // System.out.println("Escribe un numero: ");
+        // int number = data.nextInt();
+        // System.out.println(number);
+        // }
+
         // PROGRAMACION ORIENTADA A OBJETOS
 
         // Conceptos
@@ -432,13 +459,12 @@ public class Apuntes {
          * POO: Es un paradigma de programacion, una forma de programar para resolver un
          * problema, se basa en la realidad haciendo enfasis en los objetos los cuales
          * contienen atributos - caracteristicas y metodos - funcionalidades.
-         * Clase: es la agrupación de objetos, el molde - template en el cual se
-         * declaran los metodos y atributos y que gracias a la clase es posible crear
-         * objetos.
-         * Objeto: es una instancia de una clase el cual contiene metodos y atributos.
-         * Instancia: creación de un objeto a partir de una clase (new).
-         * 
-         * Pilares de la POO: abstraccion, encapsulamiento, herencia y poliformismo.
+         * CLASE: es la agrupación de objetos, una plantilla - un molde - un template en
+         * el cual se declaran los metodos y atributos y que gracias a la clase es
+         * posible crear objetos.
+         * OBJETO: es una instancia de una clase el cual contiene metodos y atributos.
+         * INSTANCIA: creación de un objeto a partir de una clase (new).
+         * PILARES DE LA POO: abstraccion, encapsulamiento, herencia y poliformismo.
          */
 
         // ABSTRACCION:
@@ -452,8 +478,7 @@ public class Apuntes {
         // Ya que los declaramos como private los atributos, no podemos acceder
         // totalmente a ellos.
         // Podemos hacerlo de la manera anterior o usar el metodo toString que nos
-        // devuelve los
-        // datos en forma de objeto.
+        // devuelve los datos en forma de objeto.
         System.out.println(Lucas.toString());
         // llamando una serie de metodos
         Lucas.comer();
@@ -467,12 +492,17 @@ public class Apuntes {
         // obteniendo el nombre del objeto -> metodo getNombre
         String nameDog = Lucas.getNombre();
         System.out.println("Nombre del Perro: " + nameDog);
-
+        // clase Triangulo
         System.out.println("\nArea Triangulo");
-        Triangulo triangulo1 = new Triangulo(7.5f, 10.7f);
-        System.out.println(triangulo1.mostrarDatos());
+        // utilizando la clase JOptionPane
+        float base = Float.parseFloat(JOptionPane.showInputDialog("Coloca la base: "));
+        float altura = Float.parseFloat(JOptionPane.showInputDialog("Coloca la altura: "));
+        Triangulo triangulo1 = new Triangulo(base, altura);
+        System.out.println("Triangulo1: " + triangulo1.mostrarDatos());
         Triangulo triangulo2 = new Triangulo(3.7f, 20.6f);
-        System.out.println(triangulo2.mostrarDatos());
+        System.out.println("Triangulo2: " + triangulo2.mostrarDatos());
+        // Si igualas un objeto a otro objeto y cambias un valor, el valor se vera
+        // reflejando en ambos objetos, puesto que tienen la misma referencia.
 
         /**
          * ENCAPSULAMIENTO: un pilar de la POO, temas de seguridad practicamente, para
