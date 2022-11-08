@@ -1,7 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
+// import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.lang.Math;
 
 public class Apuntes {
     public static void main(String[] args) throws Exception {
@@ -140,6 +141,27 @@ public class Apuntes {
 
         String cadena = (8 > 9) ? "Verdadero" : "Falso";
         System.out.println("\nOperador Ternario: " + cadena);
+
+        // CLASE MATH
+        /**
+         * Sus metodos son estaticos, no es necesario hacer una instancia.
+         * Solo escribe la clase y podras usar sus metodos.
+         * Nos brinda componentes matematicos.
+         * Necesitamos agregar el paquete java.lang.Math
+         */
+        System.out.println("\nClase Math");
+        double numeroA = 3;
+        double numeroB = 9;
+        double numeroC = 9.6;
+        double numeroD = 9.3;
+        System.out.println("Raiz cuadrada de " + numeroB + " = " + Math.sqrt(numeroB));
+        System.out.println("Maximo de dos numeros = " + Math.max(numeroA, numeroB));
+        System.out.println("Potencia de " + numeroB + " a la " + numeroA + " = " + Math.pow(numeroB, numeroA));
+        System.out.println("Numero aleatorio de 0 a 10 = " + (int) (Math.random() * 10 + 1));
+        System.out.println("Redondeo del numero " + numeroC + " = " + Math.round(numeroC));
+        System.out.println("Redondeo del numero " + numeroD + " = " + Math.round(numeroD));
+        System.out.println("Hipotenusa, lado1: " + numeroA + " lado2: " + numeroB + " = "
+        + Math.round(Math.hypot(numeroA, numeroB)));
 
         // CADENAS
         /**
