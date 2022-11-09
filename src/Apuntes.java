@@ -401,9 +401,35 @@ public class Apuntes {
             System.out.println("");
         }
 
+        // EJERCICIO
+
+        // Recibir una cadena de numeros separados por comas y mostrar los numeros de
+        // tipo number.
+        System.out.println("\nEjercicio con split");
+        // declaración de arreglos y cadenas
+        String cadenaNumeros = "1,2,3,4,5,6";
+        // Metodo split que separa una cadena con lo que le pases como argumento y te
+        // retorna un arreglo con esos valores.
+        String cadenaNumerosNew[] = cadenaNumeros.split(",");
+        System.out.println("Imprimiendo el arreglo de numeros de tipo String: ");
+        for (String string : cadenaNumerosNew) {
+            System.out.print((string) + " ");
+        }
+        System.out.println("\nLongitud del arreglo cadenaNumerosNew: " + cadenaNumerosNew.length);
+        // ingresando en el arreglo numeros enteros del arreglo de numeros de tipo
+        // string
+        int cadenaEnteros[] = new int[cadenaNumerosNew.length];
+        for (int i = 0; i < cadenaNumerosNew.length; i++) {
+            cadenaEnteros[i] = Integer.parseInt(cadenaNumerosNew[i]);
+        }
+        System.out.println("Imprimiendo el arreglo de numeros: ");
+        for (int i : cadenaEnteros) {
+            System.out.print((i) + " ");
+        }
+
         // CLASE ARRAYS
 
-        System.out.println();
+        System.out.println("\n");
         // declaración del arreglo e inicialización de valores
         int vector[] = { 2, 3, 4, 5, 1 };
         int vector2[] = { 100, 78, 2, 35, 10, 69 };
@@ -555,11 +581,18 @@ public class Apuntes {
         System.out.println("Nombre del Perro: " + nameDog);
         // clase Triangulo
         System.out.println("\nArea Triangulo");
+
         // utilizando la clase JOptionPane
-        float base = Float.parseFloat(JOptionPane.showInputDialog("Coloca la base: "));
-        float altura = Float.parseFloat(JOptionPane.showInputDialog("Coloca la altura: "));
-        Triangulo triangulo1 = new Triangulo(base, altura);
-        System.out.println("Triangulo1: " + triangulo1.mostrarDatos());
+        /*
+         * AQUI FALTA QUITAR COMENTARIOS
+         * float base =
+         * Float.parseFloat(JOptionPane.showInputDialog("Coloca la base:"));
+         * float altura =
+         * Float.parseFloat(JOptionPane.showInputDialog("Coloca la altura: "));
+         * Triangulo triangulo1 = new Triangulo(base, altura);
+         * System.out.println("Triangulo1: " + triangulo1.mostrarDatos());
+         */
+
         Triangulo triangulo2 = new Triangulo(3.7f, 20.6f);
         System.out.println("Triangulo2: " + triangulo2.mostrarDatos());
         // Si igualas un objeto a otro objeto y cambias un valor, el valor se vera
@@ -590,9 +623,12 @@ public class Apuntes {
          * mensajes al objeto.
          */
 
-        System.out.println("\nEjercicio con arreglos y POO");
-        Arreglos alumno1 = new Arreglos(7);
-        alumno1.calificacion();
+        /*
+         * AQUI FALTA QUITAR COMENTARIOS
+         * // System.out.println("\nEjercicio con arreglos y POO");
+         * // Arreglos alumno1 = new Arreglos(7);
+         * // alumno1.calificacion();
+         */
 
     }
 }
