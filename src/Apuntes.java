@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 // import java.util.Scanner;
@@ -161,7 +162,7 @@ public class Apuntes {
         System.out.println("Redondeo del numero " + numeroC + " = " + Math.round(numeroC));
         System.out.println("Redondeo del numero " + numeroD + " = " + Math.round(numeroD));
         System.out.println("Hipotenusa, lado1: " + numeroA + " lado2: " + numeroB + " = "
-        + Math.round(Math.hypot(numeroA, numeroB)));
+                + Math.round(Math.hypot(numeroA, numeroB)));
 
         // CADENAS
         /**
@@ -400,6 +401,44 @@ public class Apuntes {
             System.out.println("");
         }
 
+        // CLASE ARRAYS
+
+        System.out.println();
+        // declaración del arreglo e inicialización de valores
+        int vector[] = { 2, 3, 4, 5, 1 };
+        int vector2[] = { 100, 78, 2, 35, 10, 69 };
+        System.out.println("Clase Array");
+        System.out.println("Metodo Sort");
+        // metodo sort, ordena valores por el metodo de ordenación quicksort
+        Arrays.sort(vector);
+        for (int i : vector) {
+            System.out.print(i + " ");
+        }
+        System.out.println("\nMetodo fill: ");
+        // fill rellena el arreglo con un solo valor utilizando la clase arrays
+        Arrays.fill(vector, 69);
+        for (int i : vector) {
+            System.out.print(i + " ");
+        }
+        System.out.println("\nMetodo binarySearch: ");
+        // busca si se encuentra el elemento, necesitas ordenarlo primero
+        Arrays.sort(vector2);
+        for (int i : vector2) {
+            System.out.print(i + " ");
+        }
+        int index = Arrays.binarySearch(vector2, 69);
+        System.out.println("\nEl numero 69 se encuentra en la posición: " + (index + 1));
+        // toString nos regresa el arreglo en forma de String
+        System.out.println("Metodo toString: ");
+        String array = Arrays.toString(vector2);
+        System.out.println(array);
+        // equals nos regresa true si ambos arreglos son iguales en tamaño y elementos
+        System.out.println("Metodo equals: ");
+        int vector3[] = { 45, 46, 14, 12, 3 };
+        int vector4[] = { 45, 46, 14, 12, 3 };
+        boolean v = Arrays.equals(vector3, vector4);
+        System.out.println(v);
+
         // Clases para cada tipo primitivo, "clases envolventes-envoltorio"
         /**
          * boolean -> Boolean
@@ -550,6 +589,10 @@ public class Apuntes {
          * Podemos comunicarnos con los objetos utilizando la misma sintaxis para darles
          * mensajes al objeto.
          */
+
+        System.out.println("\nEjercicio con arreglos y POO");
+        Arreglos alumno1 = new Arreglos(7);
+        alumno1.calificacion();
 
     }
 }
