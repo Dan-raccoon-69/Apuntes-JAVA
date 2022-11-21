@@ -1,9 +1,13 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-// import java.util.Scanner;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 import java.lang.Math;
+/**
+ * autor: Daniel De La Cruz.
+ * github: 
+ */
 
 public class Apuntes {
     public static void main(String[] args) throws Exception {
@@ -519,8 +523,16 @@ public class Apuntes {
          */
 
         /**
-         * METODO ESTATICO es aquel metodo que para ejecutarlo no es necesario crear una
-         * instancia (objeto), basta con colocar la clase(punto) y llamar al metodo.
+         * METODO-ATRIBUTO ESTATICO es aquel metodo que para ejecutarlo no es necesario
+         * crear una instancia (objeto), basta con colocar la clase(punto) y llamar al
+         * metodo-atributo.
+         * Si modificas un atributo estatico afectara a todos los objetos de la clase.
+         * Se puede usar en variables y en metodos como ya se menciono anteriormente.
+         * Existe el contexto estatico y dinamico.
+         * Contexto dinamico puede acceder al estatico, y el estatico no accede al
+         * dinamico, esto quiere decir que si tengo mi metodo estatico, dentro de el no
+         * puedo llamar metodos dinamicos, sin embargo en un metodo dinamico
+         * si puedo llamar metodos estaticos.
          */
 
         // CLASE JOptionPane
@@ -628,6 +640,15 @@ public class Apuntes {
          * // System.out.println("\nEjercicio con arreglos y POO");
          * // Arreglos alumno1 = new Arreglos(7);
          * // alumno1.calificacion();
+         */
+
+        // SOBRECARGA DE CONSTRUCTORES - METODOS
+        /**
+         * Se utiliza para reutilizar el nombre de un metodo pero con diferentes
+         * argumentos (opcionalmente de un tipo diferente de retorno.)
+         * Los metodos deben de cambiar la lista de argumentos.
+         * Pueden cambiar el tipo de retorno.
+         * Lo que define que metodo sera llamado es el num. de argumentos.
          */
 
     }
