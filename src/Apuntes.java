@@ -4,9 +4,10 @@ import java.util.Map;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 import java.lang.Math;
+
 /**
  * autor: Daniel De La Cruz.
- * github: 
+ * github:
  */
 
 public class Apuntes {
@@ -613,14 +614,15 @@ public class Apuntes {
         /**
          * ENCAPSULAMIENTO: un pilar de la POO, temas de seguridad practicamente, para
          * eso se utilizan los modificadores de acceso para restringir el acceso de
-         * diferentes atributos y constructores.
+         * diferentes atributos y constructores, permite visibilidad de Atr y Me.
          * Modificadores de acceso: private, public, protected.
          * PUBLIC: consultados, modificados o ejecutados por clases o objetos que se
          * encuentren en el mismo paquete o en paquetes diferentes.
          * PRIVATE: consultar, modificar y ejecutar elementos unicamente por la misma
          * clase, para acceder a estos valores ya sea modificarlos o obtenerlos se hace
          * uso de metodos setter y getter.
-         * PROTECTED:
+         * PROTECTED: se utilizan por todos los metodos, clases y / o atributos
+         * que se encuenentren en el mismo package.
          */
 
         /**
@@ -651,5 +653,30 @@ public class Apuntes {
          * Lo que define que metodo sera llamado es el num. de argumentos.
          */
 
+        // API DE JAVA
+        /**
+         * Cada version de JAVA tiene publicada una ayuda online
+         * para consultar la documentación de cada una de sus clases
+         * en formato HTML.
+         * Tambien se le conoce como la API JAVA DOCS.
+         * https://docs.oracle.com/javase/8/docs/api/index.html
+         */
+
+        // Varargs
+        /**
+         * Sirve cuando no sabes la cantidad de arg – parámetros recibirá tu método.
+         * Va a trabajar como si fuera un array.
+         * (checa la funcion que se encuentra hasta abajo para ver la implementación)
+         */
+        imprimeMensaje("hola", "soy", "daniel");
+        imprimeMensaje("hola");
+
+    }
+
+    public static void imprimeMensaje(String... mensajes) {
+        System.out.println("\n" + mensajes.length);
+        for (String mensaje : mensajes) {
+            System.out.println(mensaje);
+        }
     }
 }
