@@ -572,6 +572,10 @@ public class Apuntes {
         // instancia - creación de un objeto de la clase Perro, objeto llamado lUCAS
         // haciendo uso del metodo constructor
         Perro Lucas = new Perro("Lucas", "Meztizo", 1);
+        Perro peque = new Perro();
+        System.out.println("Objeto sin instancia: " + peque);
+
+
         // imprimiendo sus datos
         // System.out.println("Nombre: " + Lucas.nombre + "\nEdad: " + Lucas.edad +
         // "\nRaza: " + Lucas.raza);
@@ -670,11 +674,10 @@ public class Apuntes {
          */
         imprimeMensaje("hola", "soy", "daniel");
         imprimeMensaje("hola");
-
     }
 
     public static void imprimeMensaje(String... mensajes) {
-        System.out.println("\n" + mensajes.length);
+        System.out.println("\nNumeró de parametros: " + mensajes.length);
         for (String mensaje : mensajes) {
             System.out.println(mensaje);
         }

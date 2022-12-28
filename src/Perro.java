@@ -10,6 +10,9 @@ public class Perro {
      * Usamos this para hacer referencia al objeto
      * Se declara de esta manera:
      */
+    public Perro(){
+        
+    }
     public Perro(String nombre, String raza, int edad) {
         this.nombre = nombre;
         this.raza = raza;
