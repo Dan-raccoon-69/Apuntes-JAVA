@@ -575,7 +575,6 @@ public class Apuntes {
         Perro peque = new Perro();
         System.out.println("Objeto sin instancia: " + peque);
 
-
         // imprimiendo sus datos
         // System.out.println("Nombre: " + Lucas.nombre + "\nEdad: " + Lucas.edad +
         // "\nRaza: " + Lucas.raza);
@@ -648,13 +647,28 @@ public class Apuntes {
          * // alumno1.calificacion();
          */
 
+        // CONSTRUCTORES
+        /**
+         * Se utilizan para inicializar valores por defecto de un objeto instanciado
+         * sintaxis: metodo_Acceso nombre_clase (parametros){}
+         * Se pueden tener varios constructores (sobrecarga de constructores)
+         */
+
         // SOBRECARGA DE CONSTRUCTORES - METODOS
         /**
          * Se utiliza para reutilizar el nombre de un metodo pero con diferentes
-         * argumentos (opcionalmente de un tipo diferente de retorno.)
+         * argumentos (opcionalmente de un tipo diferente de retorno).
          * Los metodos deben de cambiar la lista de argumentos.
          * Pueden cambiar el tipo de retorno.
          * Lo que define que metodo sera llamado es el num. de argumentos.
+         */
+
+        // PAQUETES EN JAVA
+        /**
+         * Organiza nuestro codigo en paquetes - carpetas.
+         * Nos permite clasificar y ordenar nuestro codigo.
+         * En proyectos grandes se crean clases que tienden a tener el mismo nombre, que
+         * puede ocasionar problemas si es que no estan divididos en paquetes.
          */
 
         // API DE JAVA
