@@ -618,15 +618,30 @@ public class Apuntes {
          * ENCAPSULAMIENTO: un pilar de la POO, temas de seguridad practicamente, para
          * eso se utilizan los modificadores de acceso para restringir el acceso de
          * diferentes atributos y constructores, permite visibilidad de Atr y Me.
-         * Modificadores de acceso: private, public, protected.
-         * PUBLIC: consultados, modificados o ejecutados por clases o objetos que se
-         * encuentren en el mismo paquete o en paquetes diferentes.
+         * Modificadores de acceso: private, public, protected,por defecto.
+         * 
+         * PUBLIC: se puede acceder desde cualquier clase, consultados, modificados o
+         * ejecutados por clases o objetos que se encuentren en el mismo paquete
+         * o en paquetes diferentes, o bien por las clases heredadas.
          * PRIVATE: consultar, modificar y ejecutar elementos unicamente por la misma
          * clase, para acceder a estos valores ya sea modificarlos o obtenerlos se hace
-         * uso de metodos setter y getter.
-         * PROTECTED: se utilizan por todos los metodos, clases y / o atributos
-         * que se encuenentren en el mismo package.
+         * uso de metodos setter y getter, NO puede acceder a otra clase del mismo
+         * paquete, una clase heredada ni mucho menos una clase de otro paquete,
+         * se pueden utilizar el modificador en atributos, metodos, constructores.
+         * PROTECTED: puede ser accedido desde su clase, las clases del mismo paquete,
+         * las clases que heredan en el mismo paquete, Y pueden acceder desde las
+         * clases que heredan desde otro paquete, (muy parecido a default).
+         * DEFAULT: puede ser accedido desde su clase, las clases del mismo paquete
+         * y las clases que heredan en el mismo paquete, PERO NO pueden acceder desde
+         * las
+         * clases que heredan desde otro paquete.
          */
+
+        // modificador, clase, paquete, subclase(mismo paquete), subclase(dif paquete), Mundo
+        // public, si, si, si, si, si
+        // private, si, no, no, no, no
+        // default, si, si, si, no, no
+        // protected, si, si, si, si, no
 
         /**
          * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
