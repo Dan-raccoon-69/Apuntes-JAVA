@@ -637,11 +637,27 @@ public class Apuntes {
          * clases que heredan desde otro paquete.
          */
 
-        // modificador, clase, paquete, subclase(mismo paquete), subclase(dif paquete), Mundo
+        // modificador, clase, paquete, subclase(mismo paquete), subclase(dif paquete),
+        // Mundo
         // public, si, si, si, si, si
         // private, si, no, no, no, no
         // default, si, si, si, no, no
         // protected, si, si, si, si, no
+
+        // MIEMBROS ESTATICOS
+        /**
+         * Todos aquellos metodos o atributos que contengan la palabra STATIC
+         * hacen que el atributo o metodo se conviertan en atributos o metodos de
+         * la clase, no se necesita instanciar un objeto para poder acceder a
+         * ese atributo o metodo.
+         * Ejemplo de clase STATIC: Math: en el cual podemos acceder a diversos
+         * metodos.
+         * El metodo main es de tipo STATIC ya que no hay necesidad de instanciar,
+         * el metodo main le pertenece a la clase y asi es mas eficaz llamar al metodo
+         * main.
+         * Dentro de un metodo STATIC no podemos hacer uso de atributos o metodos
+         * que le pertenezcan a la instancia-objeto.
+         */
 
         /**
          * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
@@ -678,6 +694,13 @@ public class Apuntes {
          * Lo que define que metodo sera llamado es el num. de argumentos.
          */
 
+        // Varargs
+        /**
+         * Sirve cuando no sabes la cantidad de arg – parámetros recibirá tu método.
+         * Va a trabajar como si fuera un array.
+         * (checa la funcion que se encuentra hasta abajo para ver la implementación)
+         */
+
         // PAQUETES EN JAVA
         /**
          * Organiza nuestro codigo en paquetes - carpetas.
@@ -695,14 +718,9 @@ public class Apuntes {
          * https://docs.oracle.com/javase/8/docs/api/index.html
          */
 
-        // Varargs
-        /**
-         * Sirve cuando no sabes la cantidad de arg – parámetros recibirá tu método.
-         * Va a trabajar como si fuera un array.
-         * (checa la funcion que se encuentra hasta abajo para ver la implementación)
-         */
-        imprimeMensaje("hola", "soy", "daniel");
-        imprimeMensaje("hola");
+        Apuntes.imprimeMensaje("hola", "soy", "daniel");
+        Apuntes.imprimeMensaje("Mi", "perro", "se", "llama", "Lucas");
+        Apuntes.sumaXelementos(2, 4, 6, 8, 10);
     }
 
     public static void imprimeMensaje(String... mensajes) {
@@ -710,5 +728,13 @@ public class Apuntes {
         for (String mensaje : mensajes) {
             System.out.println(mensaje);
         }
+    }
+
+    public static void sumaXelementos(int... numeros) {
+        int suma = 0;
+        System.out.println("\nNumeró de parametros: " + numeros.length);
+        for (int numero : numeros)
+            suma += numero;
+        System.out.println(suma);
     }
 }
