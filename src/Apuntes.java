@@ -659,18 +659,6 @@ public class Apuntes {
          * que le pertenezcan a la instancia-objeto.
          */
 
-        /**
-         * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
-         * Reutilización de codigo.
-         */
-
-        /**
-         * POLIFORMISMO: Nos permite crear diferentes formas de una forma base, ligado a
-         * la herencia.
-         * Podemos comunicarnos con los objetos utilizando la misma sintaxis para darles
-         * mensajes al objeto.
-         */
-
         /*
          * AQUI FALTA QUITAR COMENTARIOS
          * // System.out.println("\nEjercicio con arreglos y POO");
@@ -685,20 +673,70 @@ public class Apuntes {
          * Se pueden tener varios constructores (sobrecarga de constructores)
          */
 
-        // SOBRECARGA DE CONSTRUCTORES - METODOS
+        // Varargs
+        /**
+         * Sirve cuando no sabes la cantidad de arg – parámetros recibirá tu método.
+         * Va a trabajar como si fuera un array.
+         * (checa la funcion que se encuentra hasta abajo para ver la implementación)
+         */
+
+        // Overloading - SOBRECARGA DE CONSTRUCTORES - METODOS
         /**
          * Se utiliza para reutilizar el nombre de un metodo pero con diferentes
          * argumentos (opcionalmente de un tipo diferente de retorno).
          * Los metodos deben de cambiar la lista de argumentos.
          * Pueden cambiar el tipo de retorno.
          * Lo que define que metodo sera llamado es el num. de argumentos.
+         * Se realiza en la misma clase.
+         * Se ven más reflejados en constructores.
          */
 
-        // Varargs
         /**
-         * Sirve cuando no sabes la cantidad de arg – parámetros recibirá tu método.
-         * Va a trabajar como si fuera un array.
-         * (checa la funcion que se encuentra hasta abajo para ver la implementación)
+         * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
+         * Reutilización de codigo.
+         * Java no soporta la herencia multiple, solo se puede heredar de 1 clase
+         * 
+         */
+
+        System.out.println("\nHerencia:");
+        Pastor pastor1 = new Pastor();
+        pastor1.setNombre("Dug");
+        pastor1.comer();
+        pastor1.jugar();
+        pastor1.dormir();
+        pastor1.setEdad(2);
+        System.out.println(pastor1.getNombre() + "\n" + pastor1.toString());
+
+        // Override - sobreescritura de metodos
+        /**
+         * Cambiar el comportamiento de un metodo.
+         * Se realiza sobre la herencia / poliformismo *en diferentes clases*.
+         * 
+         */
+
+        
+        Pastor pastor2 = new Pastor();
+        // Salida: nombre = Sin Nombre, raza = Pastor, edad = -1
+        // ya que llamo al constructor que no tiene parametros
+        System.out.println("Pastor2: " + pastor2.toString());
+        Pastor pastor3 = new Pastor("Dag", "Pastor", 3);
+        // Salida: nombre = Dag, raza = Pastor, edad = 3
+        // ya que llamo al constructor que tiene 3 parametros
+        System.out.println("Pastor3: " + pastor3.toString());
+
+        // Objeto de la clase Perro
+        Lucas.comer();
+        // El Perro esta comiendo croquetas...
+
+        // Objeto de la clase Pastor
+        pastor1.comer();
+        // salida: El Perro esta comiendo carne, vegetales y croquetas...
+
+        /**
+         * POLIFORMISMO: Nos permite crear diferentes formas de una forma base, ligado a
+         * la herencia.
+         * Podemos comunicarnos con los objetos utilizando la misma sintaxis para darles
+         * mensajes al objeto.
          */
 
         // PAQUETES EN JAVA
@@ -720,7 +758,7 @@ public class Apuntes {
 
         Apuntes.imprimeMensaje("hola", "soy", "daniel");
         Apuntes.imprimeMensaje("Mi", "perro", "se", "llama", "Lucas");
-        Apuntes.sumaXelementos(2, 4, 6, 8, 10);
+        Apuntes.sumaXelementos(2, 4, 6, 8, 20);
     }
 
     public static void imprimeMensaje(String... mensajes) {

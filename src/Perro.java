@@ -10,9 +10,12 @@ public class Perro {
      * Usamos this para hacer referencia al objeto
      * Se declara de esta manera:
      */
-    public Perro(){
-        
+    public Perro() {
+        this.nombre = "Sin Nombre";
+        this.raza = "Pastor";
+        this.edad = -1;
     }
+
     public Perro(String nombre, String raza, int edad) {
         this.nombre = nombre;
         this.raza = raza;
@@ -54,7 +57,7 @@ public class Perro {
 
     // metodos
     public void comer() {
-        System.out.println("El Perro esta comiendo...");
+        System.out.println("El Perro esta comiendo croquetas...");
     }
 
     public void ladrar() {
@@ -68,6 +71,6 @@ public class Perro {
     @Override
     // El metodo toString nos srive para mostrar los datos del objeto
     public String toString() {
-        return "Perro [nombre = " + nombre + ", raza = " + raza + ", edad = " + edad + "]";
+        return "Perro [nombre = " + this.nombre + ", raza = " + this.raza + ", edad = " + this.edad + "]";
     }
 }
