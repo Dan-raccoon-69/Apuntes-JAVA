@@ -18,6 +18,7 @@ public class Pastor extends Perro{
         System.out.println("El Perro esta durmiendo...");
     }
 
+    // sobreescritura del metodo Comer
     @Override
     public void comer(){
         System.out.println("El Perro esta comiendo carne, vegetales y croquetas...");

@@ -562,6 +562,9 @@ public class Apuntes {
          * CLASE: es la agrupación de objetos, una plantilla - un molde - un template en
          * el cual se declaran los metodos y atributos y que gracias a la clase es
          * posible crear objetos.
+         * Tambien es posible usar clases anidadas, basta con definir una clase
+         * dentro de otra clase, se trabajan como clases normales
+         * pueden poseer atributos y metodos, contsructores, clases anidadas, etc.
          * OBJETO: es una instancia de una clase el cual contiene metodos y atributos.
          * INSTANCIA: creación de un objeto a partir de una clase (new).
          * PILARES DE LA POO: abstraccion, encapsulamiento, herencia y poliformismo.
@@ -694,8 +697,27 @@ public class Apuntes {
         /**
          * HERENCIA: una clase padre puede heredar atributos y metodos a una clase hija.
          * Reutilización de codigo.
-         * Java no soporta la herencia multiple, solo se puede heredar de 1 clase
-         * 
+         * Java no soporta la herencia multiple, solo se puede heredar de 1 clase.
+         * Java soporta n cantidad de clases hijas.
+         * Nos permite crear nuevas clases a partir de clases ya existentes pero
+         * con algunas adiciones o cambios (atributos y metodos propios).
+         * Nos permite reducir el codigo.
+         * Hay que tener en cuenta la relación que existe entre clases para que
+         * lleguemos a una abstracción correcta, siguiendo la nomencaltura:
+         * ? ES UN ?, hablando de jerarquia.
+         * Ejemplos:
+         * Mascota es un perro y un gato, la clase Mascota es la clase Principal
+         * por lo tanto Mascota es la clase padre, perro-gato son clases hijas.
+         */
+
+        // PALABRA RESERVADA SUPER
+        /**
+         * Sirve para reescribir metodos pero sin perder las funcionalidades de 
+         * la clase padre de tal manera que las clases hijas y sus metodos sean mucho
+         * mas robustas.
+         * Tambien lo podemos encontrar mucho en los constructores, llamando al 
+         * constructor de la clase padre y pasandole los parametros que serian los
+         * valores a inicializar, *checar archivo "PASTOR.java" para el ejemplo.
          */
 
         System.out.println("\nHerencia:");
@@ -709,12 +731,14 @@ public class Apuntes {
 
         // Override - sobreescritura de metodos
         /**
-         * Cambiar el comportamiento de un metodo.
+         * La implementación sucede cuando ciertos metodos no satisfagan las
+         * necesidades fijas, más o menos acciones-código.
+         * Tomar un metodo de la clase padre e implementar su comportamiento
+         * en la clase hija.
+         * Cambia el comportamiento de un metodo.
          * Se realiza sobre la herencia / poliformismo *en diferentes clases*.
-         * 
          */
 
-        
         Pastor pastor2 = new Pastor();
         // Salida: nombre = Sin Nombre, raza = Pastor, edad = -1
         // ya que llamo al constructor que no tiene parametros
@@ -758,7 +782,7 @@ public class Apuntes {
 
         Apuntes.imprimeMensaje("hola", "soy", "daniel");
         Apuntes.imprimeMensaje("Mi", "perro", "se", "llama", "Lucas");
-        Apuntes.sumaXelementos(2, 4, 6, 8, 20);
+        Apuntes.sumaXelementos(2, 4, 6, 8, 20, 30, -30);
     }
 
     public static void imprimeMensaje(String... mensajes) {
