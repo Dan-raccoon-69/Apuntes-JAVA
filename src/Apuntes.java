@@ -763,6 +763,22 @@ public class Apuntes {
          * mensajes al objeto.
          */
 
+        // CLASES ABSTRACTAS
+        /**
+         * Habra ocasiones en donde debamos crear una clase padre donde unicamente
+         * coloquemos la estructura de una abstracción, una estructura muy general
+         * dejando que las clases hijas sean las que definan los detalles.
+         * Las clases A. son identicas en cuanto a estructura a una clase normal, 
+         * atributos, metodos, constructores.
+         * DIFERENCIA ENTRE UNA C. ABSTRACTA Y UNA NORMAL:
+         * Pose por lo menos un metodo abstracto.
+         * Pueden ser heredadas pero NO INSTANCIADAS.
+         * 
+         * ¿Que es un metodo abstracto?
+         * R= Aquel que no pose un cuerpo, define que hacer pero no como.
+         *  
+         */
+
         // PAQUETES EN JAVA
         /**
          * Organiza nuestro codigo en paquetes - carpetas.

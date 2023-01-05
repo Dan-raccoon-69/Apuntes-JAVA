@@ -1,4 +1,4 @@
-// archivo para el aprendizaje de la POO
+// Archivo-Clase para el aprendizaje de la POO
 public class Triangulo {
     // atributos
     private float base;
