@@ -702,20 +702,24 @@ public class Apuntes {
          * Nos permite crear nuevas clases a partir de clases ya existentes pero
          * con algunas adiciones o cambios (atributos y metodos propios).
          * Nos permite reducir el codigo.
+         * Los constructores son utilizados pero no heredados.
          * Hay que tener en cuenta la relación que existe entre clases para que
-         * lleguemos a una abstracción correcta, siguiendo la nomencaltura:
+         * lleguemos a una abstracción correcta, siguiendo la nomenclatura:
          * ? ES UN ?, hablando de jerarquia.
          * Ejemplos:
          * Mascota es un perro y un gato, la clase Mascota es la clase Principal
          * por lo tanto Mascota es la clase padre, perro-gato son clases hijas.
+         * Vehiculo es un taxi y un autobus, la clase Vehiculo es la principal
+         * por lo tanto Vehiculo es la clase base-padre, taxi-autobus son clases hijas
+         * o tambien llamadas clases derivadas.
          */
 
         // PALABRA RESERVADA SUPER
         /**
-         * Sirve para reescribir metodos pero sin perder las funcionalidades de 
+         * Sirve para reescribir metodos pero sin perder las funcionalidades de
          * la clase padre de tal manera que las clases hijas y sus metodos sean mucho
          * mas robustas.
-         * Tambien lo podemos encontrar mucho en los constructores, llamando al 
+         * Tambien lo podemos encontrar mucho en los constructores, llamando al
          * constructor de la clase padre y pasandole los parametros que serian los
          * valores a inicializar, *checar archivo "PASTOR.java" para el ejemplo.
          */
@@ -768,7 +772,7 @@ public class Apuntes {
          * Habra ocasiones en donde debamos crear una clase padre donde unicamente
          * coloquemos la estructura de una abstracción, una estructura muy general
          * dejando que las clases hijas sean las que definan los detalles.
-         * Las clases A. son identicas en cuanto a estructura a una clase normal, 
+         * Las clases A. son identicas en cuanto a estructura a una clase normal,
          * atributos, metodos, constructores.
          * DIFERENCIA ENTRE UNA C. ABSTRACTA Y UNA NORMAL:
          * Pose por lo menos un metodo abstracto.
@@ -776,7 +780,7 @@ public class Apuntes {
          * 
          * ¿Que es un metodo abstracto?
          * R= Aquel que no pose un cuerpo, define que hacer pero no como.
-         *  
+         * 
          */
 
         // PAQUETES EN JAVA
@@ -785,6 +789,8 @@ public class Apuntes {
          * Nos permite clasificar y ordenar nuestro codigo.
          * En proyectos grandes se crean clases que tienden a tener el mismo nombre, que
          * puede ocasionar problemas si es que no estan divididos en paquetes.
+         * Agrupacion de clases con caracteristicas comunes.
+         * Mantenibilidad de codigo.
          */
 
         // API DE JAVA
